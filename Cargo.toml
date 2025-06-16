@@ -1,0 +1,23 @@
+[package]
+name = "elune"
+version = "0.1.0-alpha"
+edition = "2024"
+authors = ["Veridian Zenith"]
+description = "A customizable desktop widget system for Linux"
+license = "MIT"
+repository = "https://github.com/Veridian-Zenith/Elune"
+
+[dependencies]
+iced = { version = "0.10", features = ["image", "svg", "canvas", "tokio"] }
+directories = "5.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+image = "0.24"
+font-kit = "0.11"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.0", features = ["full"] }
+sysinfo = "0.29"
+mpris = "2.0"
+chrono = "0.4"
+async-trait = "0.1"

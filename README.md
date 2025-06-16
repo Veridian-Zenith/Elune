@@ -1,115 +1,67 @@
-# Elune
+**Project: Elune**
 
-A COSMIC-compatible system monitoring widget for Linux, inspired by Rainmeter.
+**Description:**
+Elune is a customizable desktop widget system, written in Rust, designed to bring live, interactive, and theme-aware UI components to Linux desktops. Inspired by Rainmeter on Windows, Elune integrates seamlessly with the Cosmic DE and other Wayland-based environments, offering lightweight yet rich visual widgets like clocks, system monitors, weather, and user-defined modules.
 
-## Features
-- Real-time system monitoring
-- Plugin support
-- Gold/Fuchsia theme with Gamja Flower font
-- COSMIC DE integration
-- Transparent interface with shadows
-- Hot-loadable plugins
+Elune is built using the `iced` GUI library, providing a reactive, declarative interface and smooth performance with GPU acceleration. Its modular system allows users to easily craft and extend their desktop experience with widgets that feel native, elegant, and minimal.
 
-## Installation
+**Key Features:**
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/Elune.git
-cd Elune
+* **Modern Rust Architecture**: Fully written in Rust with safety, performance, and concurrency in mind.
+* **Reactive GUI with Iced**: Built on top of the `iced` framework for responsive and beautiful UIs.
+* **Widget Engine**: Support for a variety of widgets, such as:
 
-# Install dependencies
-Gamja Flower font comes from Google Fonts
+  * Digital and analog clocks
+  * CPU, RAM, disk, and network monitors
+  * Weather integration (via APIs like OpenWeatherMap)
+  * Media controls
+  * Custom shell or script output widgets
+* **Theming Support**: Elune supports theming and transparency with Cosmic DE in mind, ensuring it visually aligns with your desktop style.
 
-https://fonts.google.com/specimen/Gamja+Flower
+  * Default theme: Black, gold, and fuchsia with Gamja Flower font and a custom app icon
+  * User-selectable colors, fonts, transparencies, and spacing
+* **Dynamic Layout**:
 
-# Build and install
-cargo install --path .
-```
+  * Right-click to enter edit mode
+  * Drag-and-drop positioning
+  * Resizable and pinnable widgets
+  * Optional snap-to-grid layout
+* **Configuration Directory:**
 
-## Configuration
+  * Uses `~/.config/Elune` for settings, themes, and widget definitions
+  * Auto-creates default config files on first run
+* **Startup Options:**
 
-Elune stores its configuration in `~/.config/Elune/`:
-- `config.toml` - Main configuration
-- `plugins/` - Directory for plugin files
-- `themes/` - Custom theme files
+  * User can enable Elune via `.desktop` autostart entry
+  * Optional `systemd --user` service generator for background launch
+* **Extensibility:**
 
-On first run, Elune will prompt for startup preferences:
-- COSMIC DE autostart
-- Systemd user service
+  * TOML/YAML config-driven widgets
+  * Plugin architecture (planned)
+  * Easy-to-extend architecture for future scripting (e.g., Lua or WASM)
 
-## Plugin Development
+**Planned Integrations:**
 
-Create plugins without recompiling Elune:
+* Desktop APIs: integration with portals and system status providers
+* Weather APIs: OpenWeatherMap, AccuWeather
+* Media APIs: MPRIS
+* External Extension Channels: Like Chrome Web Store (later)
 
-1. Create a new plugin file:
-```rust
-use async_trait::async_trait;
-use elune::plugin::Plugin;
-use elune::theme::EluneTheme;
+**Use Cases:**
 
-#[derive(Default)]
-pub struct MyPlugin {
-    state: String,
-}
+* Displaying system vitals elegantly on a desktop
+* Creating information panels for stream overlays
+* Embedding lightweight interactive dashboards on Linux
+* Aesthetic customization for desktop setups (e.g., cyberpunk, minimal, vintage themes)
 
-#[async_trait]
-impl Plugin for MyPlugin {
-    fn name(&self) -> &str { "My Plugin" }
-    fn description(&self) -> &str { "Plugin description" }
+**Target Audience:**
+Linux users (especially Wayland + Cosmic DE enthusiasts), Rust developers, ricing aficionados, streamers, and anyone wanting to add dynamic, stylish, and functional overlays to their workspace.
 
-    async fn update(&mut self) {
-        // Update logic here
-    }
+**Status:**
+Active development. Alpha release planned Q3 2025.
 
-    fn view(&self, theme: &EluneTheme) -> Element<Message> {
-        // View layout here
-    }
-}
+**License:**
+MIT
 
-#[no_mangle]
-pub fn _plugin_create() -> Box<dyn Plugin> {
-    Box::new(MyPlugin::default())
-}
-```
-
-2. Compile plugin:
-```bash
-rustc --crate-type cdylib my_plugin.rs -o my_plugin.so
-```
-
-3. Move to plugins directory:
-```bash
-mv my_plugin.so ~/.config/Elune/plugins/
-```
-
-4. Restart Elune
-
-## Default Layout
-```
-elune/
-├── assets/
-│   ├── fonts/
-│   │   └── GamjaFlower-Regular.ttf
-│   └── images/
-│       └── icon.png
-├── src/
-│   ├── theme/
-│   ├── plugins/
-│   ├── widgets/
-│   └── main.rs
-├── examples/
-├── Cargo.toml
-└── README.md
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
-
-## License
-
-MIT License - See [LICENSE](LICENSE) for details
+**Repository:**
+[Elune by Veridian Zenith](https://github.com/Veridian-Zenith/Elune)
