@@ -1,67 +1,98 @@
-**Project: Elune**
+## ⚖️ Legal Disclaimer
 
-**Description:**
-Elune is a customizable desktop widget system, written in Rust, designed to bring live, interactive, and theme-aware UI components to Linux desktops. Inspired by Rainmeter on Windows, Elune integrates seamlessly with the Cosmic DE and other Wayland-based environments, offering lightweight yet rich visual widgets like clocks, system monitors, weather, and user-defined modules.
+**Veridian Zenith** is a digital label and project organization operated by **Jeremy Matlock**, also known as **Dae Euhwa**.
+All works published under this name are the intellectual property of Jeremy Matlock unless otherwise specified.
 
-Elune is built using the `iced` GUI library, providing a reactive, declarative interface and smooth performance with GPU acceleration. Its modular system allows users to easily craft and extend their desktop experience with widgets that feel native, elegant, and minimal.
+---
 
-**Key Features:**
+## 🌙 Project Overview: *Elune*
 
-* **Modern Rust Architecture**: Fully written in Rust with safety, performance, and concurrency in mind.
-* **Reactive GUI with Iced**: Built on top of the `iced` framework for responsive and beautiful UIs.
-* **Widget Engine**: Support for a variety of widgets, such as:
+**Elune** is a customizable desktop widget system written in **Rust**, designed to bring live, interactive, and theme-aware UI components to Linux desktops.
 
-  * Digital and analog clocks
+Inspired by *Rainmeter* (Windows), Elune integrates seamlessly with **Cosmic DE** and other **Wayland-based environments**, delivering elegant widgets such as clocks, system monitors, weather panels, and user-defined modules.
+
+Built on the [`iced`](https://github.com/iced-rs/iced) GUI library, Elune offers GPU-accelerated performance with a reactive, declarative interface. Its modular design empowers users to tailor their desktop experience with native-feeling, minimalist widgets.
+
+---
+
+## ✨ Key Features
+
+* **Modern Rust Architecture**: Built entirely in Rust for safety, performance, and concurrency.
+* **Reactive GUI**: Powered by `iced` for smooth and responsive UI behavior.
+* **Widget Engine** with support for:
+
+  * Digital & analog clocks
   * CPU, RAM, disk, and network monitors
-  * Weather integration (via APIs like OpenWeatherMap)
-  * Media controls
-  * Custom shell or script output widgets
-* **Theming Support**: Elune supports theming and transparency with Cosmic DE in mind, ensuring it visually aligns with your desktop style.
+  * Weather integration (e.g., OpenWeatherMap)
+  * Media controls (via MPRIS)
+  * Custom shell/script-driven widgets
+* **Theming Support**:
 
-  * Default theme: Black, gold, and fuchsia with Gamja Flower font and a custom app icon
-  * User-selectable colors, fonts, transparencies, and spacing
+  * Cosmic DE-style theming and transparency
+  * Default: **Black, gold, and fuchsia** with *Gamja Flower* font
+  * Fully customizable: fonts, colors, transparency, spacing
 * **Dynamic Layout**:
 
-  * Right-click to enter edit mode
+  * Right-click → Edit mode
   * Drag-and-drop positioning
-  * Resizable and pinnable widgets
-  * Optional snap-to-grid layout
-* **Configuration Directory:**
+  * Resizable, pinnable, and optionally snap-to-grid widgets
+* **Configuration System**:
 
-  * Uses `~/.config/Elune` for settings, themes, and widget definitions
-  * Auto-creates default config files on first run
-* **Startup Options:**
+  * Uses `~/.config/Elune`
+  * Auto-generates defaults on first run
+* **Autostart Options**:
 
-  * User can enable Elune via `.desktop` autostart entry
-  * Optional `systemd --user` service generator for background launch
-* **Extensibility:**
+  * `.desktop` file support
+  * Optional `systemd --user` service generation
+* **Extensibility**:
 
-  * TOML/YAML config-driven widgets
-  * Plugin architecture (planned)
-  * Easy-to-extend architecture for future scripting (e.g., Lua or WASM)
+  * Configurable with **TOML** or **YAML**
+  * Plugin system *(planned)*
+  * Future support for **Lua** or **WASM scripting**
 
-**Planned Integrations:**
+---
 
-* Desktop APIs: integration with portals and system status providers
-* Weather APIs: OpenWeatherMap, AccuWeather
-* Media APIs: MPRIS
-* External Extension Channels: Like Chrome Web Store (later)
+## 🔌 Planned Integrations
 
-**Use Cases:**
+* Desktop APIs (portals, system status, etc.)
+* Weather APIs (OpenWeatherMap, AccuWeather)
+* Media APIs (MPRIS)
+* External Widget Repositories *(similar to Chrome Web Store)*
 
-* Displaying system vitals elegantly on a desktop
-* Creating information panels for stream overlays
-* Embedding lightweight interactive dashboards on Linux
-* Aesthetic customization for desktop setups (e.g., cyberpunk, minimal, vintage themes)
+---
 
-**Target Audience:**
-Linux users (especially Wayland + Cosmic DE enthusiasts), Rust developers, ricing aficionados, streamers, and anyone wanting to add dynamic, stylish, and functional overlays to their workspace.
+## 🧩 Use Cases
 
-**Status:**
-Active development. Alpha release planned Q3 2025.
+* Displaying system vitals with visual flair
+* Creating overlays for stream setups
+* Lightweight dashboards for info-at-a-glance
+* Enhancing desktop aesthetic (cyberpunk, vintage, minimal, etc.)
 
-**License:**
-MIT
+---
 
-**Repository:**
-[Elune by Veridian Zenith](https://github.com/Veridian-Zenith/Elune)
+## 👥 Target Audience
+
+Linux users (especially Wayland + Cosmic DE), Rust devs, ricing enthusiasts, streamers, and anyone wanting dynamic, stylish overlays on their desktop.
+
+---
+
+## 📦 Status
+
+**In active development**
+Alpha release expected: **Q3 2025**
+
+---
+
+## 📝 License
+
+**Dual-licensed** under the **GNU AGPLv3** for community use and the **Veridian Commercial License (VCL 1.0)** for proprietary applications.
+
+See the [LICENSE](LICENSE) file for full details.
+
+---
+
+## 🌐 Repository
+
+🔗 [Elune by Veridian Zenith — GitHub](https://github.com/Veridian-Zenith/Elune)
+
+---
