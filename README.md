@@ -1,10 +1,3 @@
-## ⚖️ Legal Disclaimer
-
-**Veridian Zenith** is a digital label and project organization operated by **Jeremy Matlock**, also known as **Dae Euhwa**.
-All works published under this name are the intellectual property of Jeremy Matlock unless otherwise specified.
-
----
-
 ## 🌙 Project Overview: *Elune*
 
 **Elune** is a customizable desktop widget system written in **Rust**, designed to bring live, interactive, and theme-aware UI components to Linux desktops.
@@ -94,5 +87,12 @@ See the [LICENSE](LICENSE) file for full details.
 ## 🌐 Repository
 
 🔗 [Elune by Veridian Zenith — GitHub](https://github.com/Veridian-Zenith/Elune)
+
+---
+
+## ⚖️ Legal Disclaimer
+
+**Veridian Zenith** is a digital label and project organization operated by **Jeremy Matlock**, also known as **Dae Euhwa**.
+All works published under this name are the intellectual property of Jeremy Matlock unless otherwise specified.
 
 ---
